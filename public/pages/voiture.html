@@ -1,0 +1,52 @@
+<h1>voiture</h1>
+  <div class="container" >
+        <h1>Voiture de LUXE</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Couleur</th>
+                    <th>Type</th>
+                    <th>Prix</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type='text' ng-model='voiture.nom' class="form-control">
+                    </td>
+                    <td>
+                        <input type='text' ng-model='voiture.couleur' class="form-control">
+                    </td>
+                    <td>
+                        <input type='text' ng-model='voiture.type' class="form-control">
+                    </td>
+                    <td>
+                        <input type='text' ng-model='voiture.prix' class="form-control">
+                    </td>
+                    <td>
+                        <button class="btn btn-primary" ng-click="addVoiture()">Add Voiture</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default" ng-click="update()">Update </button>&nbsp &nbsp
+                        <button type="button" class="btn btn-info" ng-click="deselect()">Clear</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="divimage col-md-3"ng-repeat='voiture in listvoiture'>
+            {{voiture.nom}} 
+            {{voiture.couleur}} 
+            {{voiture.type}} 
+            {{voiture.prix}}
+            <img class="image"ng-src='images/{{voiture.image}}' />
+            
+                <button type="button" class="icon" ng-click="remove(voiture._id)"><img src="images/delete.png"></button>
+           
+            
+                <button type="button" class="icon" ng-click="edit(voiture._id)"><img src="images/draw.png"></button>
+           
+        </div>
+
+    </div>
