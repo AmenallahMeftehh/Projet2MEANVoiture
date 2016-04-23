@@ -3,7 +3,7 @@
     height: 11em;
     display: block;
     padding: 1em;
-    border: 1px solid black;
+    border: 1px groove ;
     background-color: aliceblue;
     margin: 0.5em;
     font-size: 22px;
@@ -13,14 +13,14 @@
 .image{
     width: 8em;
     height: 5em;
-    border: 0.5px solid grey;
+    border: 1px groove ;
     margin: 0.8em;
 }
 body{
     background-color: azure;
 }
 .icon{
-    display: block;
+    display: inline-block;
     background-color: transparent;
     border: none;
 }

@@ -16,6 +16,12 @@ refresh();
       refresh();
     });
   };
-
+// fonction supprimer
+  $scope.remove = function(id){
+    console.log(id);
+    $http.delete('/listvoiture/'+id).success(function(response){
+      refresh();
+    })
+  };
 
 }]);
